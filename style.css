@@ -1,0 +1,110 @@
+.header {
+	padding: 10px; /* Text padding */
+	text-align: center; /*Text align */
+	background: rgba(0, 10, 255); /* Background colour */
+	color: rgb(255, 255, 255); /* White text colour */
+}
+
+.navbar {
+	overflow: hidden; /* Hide overflow */
+	background-color: rgba(0, 0, 0, 0.5);
+	font-family: monaco, lucida console, monospace;
+}
+
+.navbar a {
+	/* Style navbar links */
+	float: left; /* make sure links stay side by side */
+	display: block; /*change display to block */
+	color: white; /* text colour */
+	text-align: center; /* text alignment */
+	padding: 14px 20px; /* text padding */
+	text-decoration: none; /* remove link underline */
+}
+
+.navbar a.right {
+	/* Right aligned link */
+	float: right; /* Float a link to the right */
+}
+
+.navbar a:hover {
+	/* Change colour on hover */
+	background-color: rgb(0, 0, 0); /* Black Background colour */
+	color: rgb(255, 255, 255);
+}
+
+* {
+	box-sizing: border-box; /* Ensure proper sizing */
+}
+
+@keyframes sideanim {
+	0% {
+		background-color: red;
+	}
+	16% {
+		background-color: orange;
+	}
+	32% {
+		background-color: yellow;
+	}
+	48% {
+		background-color: green;
+		color: white;
+	}
+	64% {
+		background-color: blue;
+	}
+	80% {
+		background-color: pink;
+		color: black;
+	}
+	96% {
+		background-color: purple;
+		color: white;
+	}
+	100% {
+		background-color: white;
+		color: black;
+	}
+}
+.row {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.side {
+	flex: 40%; /* set width of sidebar */
+	background-color: rgba(222, 126, 0);
+	padding: 20px;
+	animation-name: sideanim;
+	animation-duration: 60s;
+	animation-iteration-count: infinite;
+	font-family: verdana, lucida console, monospace;
+	
+}
+
+.main {
+	flex: 60%; /* Set the width of the main area */
+	background-color: white;
+	padding: 20px;
+}
+
+@media screen and (max-width: 700px) {
+	.row {
+		flex-direction: column; /* Stack sidebar and main if screen is less than 700px wide */
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.navbar a {
+		float: none;
+		width: 100%; /* Stack navbar links if screen is l;ess than 400px wide */
+	}
+}
+
+.footer {
+	padding: 1px;
+	padding-left: 20px;
+	text-align: left;
+	background: rgb(180, 180, 180);
+	font-family: verdana, lucida console, monospace;
+}
